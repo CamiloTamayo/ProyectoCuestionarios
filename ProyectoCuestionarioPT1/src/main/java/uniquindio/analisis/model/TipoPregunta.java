@@ -3,6 +3,9 @@ package uniquindio.analisis.model;
 import javax.persistence.*;
 
 import lombok.*;
+
+import java.util.List;
+
 @Entity
 @Data
 public class TipoPregunta {
@@ -11,5 +14,9 @@ public class TipoPregunta {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer numero;
 
+    @Column(length = 50)
     private String nombre;
+
+    @OneToMany(mappedBy = "tipoPregunta")
+    private List<Pregunta> preguntas;
 }

@@ -3,6 +3,9 @@ package uniquindio.analisis.model;
 import javax.persistence.*;
 
 import lombok.*;
+
+import java.sql.Date;
+
 @Data
 @Entity
 public class Test {
