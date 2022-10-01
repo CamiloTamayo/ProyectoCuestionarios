@@ -1,8 +1,9 @@
 package uniquindio.analisis.model;
 
-import javax.persistence.*;
+import lombok.Data;
 
-import lombok.*;
+import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -16,10 +17,13 @@ public class Opcion {
     @Column(length = 150, nullable = false)
     private String texto;
 
-    private  boolean isCorrecta;
+    private boolean isCorrecta;
 
     private byte[] imagen;
 
     @ManyToOne
     private Pregunta pregunta;
+
+    @OneToMany(mappedBy = "opcionMarcada")
+    private List<Respuesta> respuestas;
 }

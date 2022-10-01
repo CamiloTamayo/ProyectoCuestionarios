@@ -1,9 +1,8 @@
 package uniquindio.analisis.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
-
-import lombok.*;
-
 import java.util.List;
 
 @Data
@@ -28,4 +27,7 @@ public class Pregunta {
 
     @OneToMany(mappedBy = "pregunta")
     private List<Opcion> opciones;
+
+    @OneToMany(mappedBy = "preguntaRespondida")
+    private List<Respuesta> respuestas;
 }
