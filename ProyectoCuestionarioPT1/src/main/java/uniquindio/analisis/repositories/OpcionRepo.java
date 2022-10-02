@@ -1,4 +1,4 @@
-package uniquindio.analisis.repositorios;
+package uniquindio.analisis.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import uniquindio.analisis.model.Opcion;
