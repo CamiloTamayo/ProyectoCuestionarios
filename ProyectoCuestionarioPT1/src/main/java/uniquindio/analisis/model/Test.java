@@ -18,6 +18,9 @@ public class Test {
     private int puntaje;
     private int adaptacion;
 
+    @ManyToOne
+    private Usuario usuario;
+
     @OneToMany(mappedBy = "testRealizado")
     private List<Respuesta> respuestas;
 }

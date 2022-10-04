@@ -1,8 +1,10 @@
 package uniquindio.analisis.model;
 
-import javax.persistence.*;
+import lombok.Data;
 
-import lombok.*;
+import javax.persistence.*;
+import java.util.List;
+
 @Entity
 @Data
 public class Usuario {
@@ -18,4 +20,7 @@ public class Usuario {
 
     @ManyToOne
     private TipoUsuario tipoUsuario;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Test> tests;
 }

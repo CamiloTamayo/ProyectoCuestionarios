@@ -23,9 +23,6 @@ public class Pregunta {
     private int nivelDificultad;
 
     @ManyToOne
-    private Materia materia;
-
-    @ManyToOne
     private TipoPregunta tipoPregunta;
 
     @OneToMany(mappedBy = "pregunta")

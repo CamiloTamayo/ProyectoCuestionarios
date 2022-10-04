@@ -1,0 +1,16 @@
+//tipo usuario
+INSERT INTO cuestionarios.tipo_usuario (nombre)
+VALUES ('Estudiante');
+
+INSERT INTO cuestionarios.tipo_usuario (nombre)
+VALUES ('Profesor');
+
+//Tipo pregunta
+INSERT INTO cuestionarios.tipo_pregunta (nombre)
+VALUES ('Secuencia logica');
+
+INSERT INTO cuestionarios.tipo_pregunta (nombre)
+VALUES ('Actividad de laberinto');
+
+INSERT INTO cuestionarios.tipo_pregunta (nombre)
+VALUES ('Actividad de cuestionario');
