@@ -6,6 +6,7 @@ import uniquindio.analisis.model.Opcion;
 import uniquindio.analisis.repositories.OpcionRepo;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Service
 public class OpcionServiceImpl implements OpcionService, Serializable {
@@ -21,6 +22,16 @@ public class OpcionServiceImpl implements OpcionService, Serializable {
     @Override
     public void eliminarOpcion(Opcion opcion) {
         opcionRepo.delete(opcion);
+    }
+
+    @Override
+    public List<Opcion> listarOpciones() {
+        return opcionRepo.findAll();
+    }
+
+    @Override
+    public List<Opcion> listarOpcionesPreguntaId(Integer preguntaId) {
+        return null;
     }
 
 

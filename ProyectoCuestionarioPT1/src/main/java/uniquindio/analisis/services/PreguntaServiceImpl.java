@@ -6,6 +6,7 @@ import uniquindio.analisis.model.Pregunta;
 import uniquindio.analisis.repositories.PreguntaRepo;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Service
 public class PreguntaServiceImpl implements PreguntaService, Serializable {
@@ -21,5 +22,10 @@ public class PreguntaServiceImpl implements PreguntaService, Serializable {
     @Override
     public void borrarPregunta(Pregunta pregunta) {
         preguntaRepo.delete(pregunta);
+    }
+
+    @Override
+    public List<Pregunta> listarPreguntas() {
+        return preguntaRepo.findAll();
     }
 }

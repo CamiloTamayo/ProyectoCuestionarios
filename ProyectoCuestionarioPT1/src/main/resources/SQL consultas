@@ -1,11 +1,11 @@
-//tipo usuario
+#tipo usuario
 INSERT INTO cuestionarios.tipo_usuario (nombre)
 VALUES ('Estudiante');
 
 INSERT INTO cuestionarios.tipo_usuario (nombre)
 VALUES ('Profesor');
 
-//Tipo pregunta
+#Tipo pregunta
 INSERT INTO cuestionarios.tipo_pregunta (nombre)
 VALUES ('Secuencia logica');
 
@@ -14,3 +14,36 @@ VALUES ('Actividad de laberinto');
 
 INSERT INTO cuestionarios.tipo_pregunta (nombre)
 VALUES ('Actividad de cuestionario');
+
+#Preguntas
+INSERT INTO cuestionarios.pregunta (enunciado, imagen, nivel_dificultad, retroalimentacion, tipo_pregunta_numero)
+VALUES ('Pregunta 1 de prueba', null, 1, null, 2);
+
+INSERT INTO cuestionarios.pregunta (enunciado, imagen, nivel_dificultad, retroalimentacion, tipo_pregunta_numero)
+VALUES ('Pregunta 2 de pruebas', null, 1, null, 3);
+
+#Opciones de respuesta
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, true, 'Opcion 1 pregunta 1', 1);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, false, 'Opcion 2 pregunta 1', 1);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, false, 'Opcion 3 pregunta 1', 1);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, false, 'Opcion 4 pregunta 1', 1);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, true, 'Opcion 1 pregunta 2', 2);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, false, 'Opcion 2 pregunta 2', 2);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, false, 'Opcion 3 pregunta 2', 2);
+
+INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
+VALUES (null, false, 'Opcion 4 pregunta 2', 2);
+
