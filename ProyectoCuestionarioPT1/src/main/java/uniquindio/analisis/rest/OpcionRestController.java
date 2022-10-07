@@ -8,19 +8,19 @@ import uniquindio.analisis.services.OpcionService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/opciones")
-@CrossOrigin(origins = "http://localhost:8080")
+@RequestMapping("/api")
+@CrossOrigin
 public class OpcionRestController {
 
     @Autowired
     private OpcionService opcionService;
 
-    @GetMapping("/api/opciones/{preguntaId}")
+    @GetMapping("/opciones/{preguntaId}")
     public List<Opcion> listarOpcionesPregunta(@PathVariable Integer preguntaId) {
         return opcionService.listarOpcionesPreguntaId(preguntaId);
     }
 
-    @GetMapping
+    @GetMapping("/opciones")
     public List<Opcion> listarOpciones() {
         return opcionService.listarOpciones();
     }

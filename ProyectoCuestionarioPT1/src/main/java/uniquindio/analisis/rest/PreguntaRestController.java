@@ -11,14 +11,14 @@ import uniquindio.analisis.services.PreguntaService;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/preguntas")
-@CrossOrigin(origins = "http://localhost:8080")
+@RequestMapping("/api")
+@CrossOrigin
 public class PreguntaRestController {
 
     @Autowired
     private PreguntaService preguntaService;
 
-    @GetMapping
+    @GetMapping("/preguntas")
     public List<Pregunta> listaPreguntas() {
         try {
             return preguntaService.listarPreguntas();
