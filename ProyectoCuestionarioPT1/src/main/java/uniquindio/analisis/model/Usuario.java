@@ -1,15 +1,20 @@
 package uniquindio.analisis.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Usuario {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer documento;
 
     @Column(length = 50)
@@ -22,5 +27,7 @@ public class Usuario {
     private TipoUsuario tipoUsuario;
 
     @OneToMany(mappedBy = "usuario")
+    @ToString.Exclude
+    @JsonIgnore
     private List<Test> tests;
 }

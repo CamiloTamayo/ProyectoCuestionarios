@@ -1,17 +1,22 @@
 package uniquindio.analisis.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
 
 @Entity
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Opcion {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer id;
 
     @Column(length = 150, nullable = false)
@@ -25,5 +30,7 @@ public class Opcion {
     private Pregunta pregunta;
 
     @OneToMany(mappedBy = "opcionMarcada")
+    @ToString.Exclude
+    @JsonIgnore
     private List<Respuesta> respuestas;
 }

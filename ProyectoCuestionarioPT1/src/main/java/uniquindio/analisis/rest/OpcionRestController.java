@@ -18,8 +18,13 @@ public class OpcionRestController {
     private OpcionService opcionService;
 
     @GetMapping("/api/opciones/{preguntaId}")
-    public List<Opcion> listarOpciones(@PathVariable Integer preguntaId) {
+    public List<Opcion> listarOpcionesPregunta(@PathVariable Integer preguntaId) {
         return opcionService.listarOpcionesPreguntaId(preguntaId);
+    }
+
+    @GetMapping
+    public List<Opcion> listarOpciones() {
+        return opcionService.listarOpciones();
     }
 
 }

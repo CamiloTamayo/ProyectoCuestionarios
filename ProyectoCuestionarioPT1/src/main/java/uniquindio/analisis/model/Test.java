@@ -1,17 +1,22 @@
 package uniquindio.analisis.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 public class Test {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer id;
 
     private Date tiempo;
@@ -22,5 +27,7 @@ public class Test {
     private Usuario usuario;
 
     @OneToMany(mappedBy = "testRealizado")
+    @ToString.Exclude
+    @JsonIgnore
     private List<Respuesta> respuestas;
 }
