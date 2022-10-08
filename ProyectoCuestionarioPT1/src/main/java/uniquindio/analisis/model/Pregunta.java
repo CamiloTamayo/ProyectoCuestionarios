@@ -24,7 +24,7 @@ public class Pregunta {
     @Column(length = 100)
     private String retroalimentacion;
 
-    private byte[] imagen;
+    private String imagen;
 
     private int nivelDificultad;
 

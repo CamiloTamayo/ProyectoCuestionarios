@@ -24,7 +24,7 @@ public class Opcion {
 
     private boolean isCorrecta;
 
-    private byte[] imagen;
+    private String imagen;
 
     @ManyToOne
     private Pregunta pregunta;
