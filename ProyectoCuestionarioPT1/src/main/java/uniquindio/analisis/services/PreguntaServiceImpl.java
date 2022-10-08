@@ -32,4 +32,11 @@ public class PreguntaServiceImpl implements PreguntaService, Serializable {
     public List<Pregunta> listarPreguntas() {
         return preguntaRepo.findAll();
     }
+
+    @Override
+    public Pregunta obtenerPreguntaId(Integer id) {
+        return preguntaRepo.findById(id).get();
+    }
+
+
 }

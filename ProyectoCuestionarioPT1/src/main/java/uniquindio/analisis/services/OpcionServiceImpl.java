@@ -39,5 +39,10 @@ public class OpcionServiceImpl implements OpcionService, Serializable {
         return null;
     }
 
+    @Override
+    public Opcion obtenerOpcionId(Integer id) {
+        return opcionRepo.findById(id).get();
+    }
+
 
 }

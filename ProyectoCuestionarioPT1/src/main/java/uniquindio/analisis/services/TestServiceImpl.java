@@ -25,4 +25,9 @@ public class TestServiceImpl implements TestService, Serializable {
     public void borrarTest(Test test) {
         testRepo.delete(test);
     }
+
+    @Override
+    public Test obtenerTestId(Integer id) {
+        return testRepo.findById(id).get();
+    }
 }

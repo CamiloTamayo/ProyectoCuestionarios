@@ -13,4 +13,8 @@ public interface OpcionService {
     public List<Opcion> listarOpciones();
 
     public List<Opcion> listarOpcionesPreguntaId(Integer preguntaId);
+
+    public Opcion obtenerOpcionId(Integer id);
+
+
 }

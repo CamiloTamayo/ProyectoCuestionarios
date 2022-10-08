@@ -3,7 +3,9 @@ package uniquindio.analisis.services;
 import uniquindio.analisis.model.Test;
 
 public interface TestService {
-    void guardarTest(Test test);
+    public void guardarTest(Test test);
 
-    void borrarTest(Test test);
+    public void borrarTest(Test test);
+
+    public Test obtenerTestId(Integer id);
 }
