@@ -30,4 +30,9 @@ public class TestServiceImpl implements TestService, Serializable {
     public Test obtenerTestId(Integer id) {
         return testRepo.findById(id).get();
     }
+
+    @Override
+    public Integer obtenerTestUsuarioNombre(String nombre) {
+        return testRepo.obtenerTestUsuarioNombre(nombre);
+    }
 }

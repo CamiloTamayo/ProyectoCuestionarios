@@ -8,4 +8,7 @@ public interface TestService {
     public void borrarTest(Test test);
 
     public Test obtenerTestId(Integer id);
+
+    public Integer obtenerTestUsuarioNombre(String nombre);
+
 }

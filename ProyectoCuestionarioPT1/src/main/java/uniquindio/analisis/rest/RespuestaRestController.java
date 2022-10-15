@@ -35,7 +35,7 @@ public class RespuestaRestController {
         Pregunta pregunta = preguntaService.obtenerPreguntaId(preguntaId);
         Test test = testService.obtenerTestId(testId);
 
-        Respuesta respuesta = new Respuesta(tiempoRespuesta, test, pregunta, opcionMarca);
+        Respuesta respuesta = new Respuesta(null, tiempoRespuesta, test, pregunta, opcionMarca);
 
         respuestaService.guardarRespuesta(respuesta);
 

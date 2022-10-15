@@ -19,7 +19,7 @@ public class Opcion {
     @EqualsAndHashCode.Include
     private Integer id;
 
-    @Column(length = 150, nullable = false)
+    @Column(length = 150)
     private String texto;
 
     private boolean isCorrecta;

@@ -20,9 +20,6 @@ public class Usuario {
     @Column(length = 50)
     private String nombre;
 
-    @Column(length = 50)
-    private String contrasenia;
-
     @ManyToOne
     private TipoUsuario tipoUsuario;
 
@@ -30,4 +27,8 @@ public class Usuario {
     @ToString.Exclude
     @JsonIgnore
     private List<Test> tests;
+
+    public Usuario(String nombre) {
+        this.nombre = nombre;
+    }
 }
