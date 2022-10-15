@@ -16,37 +16,43 @@ INSERT INTO cuestionarios.tipo_pregunta (nombre)
 VALUES ('Actividad de cuestionario');
 
 #Preguntas
-INSERT INTO cuestionarios.pregunta (enunciado, imagen, nivel_dificultad, retroalimentacion, tipo_pregunta_numero)
-VALUES ('Pregunta 1 de prueba', null, 1, null, 2);
 
-INSERT INTO cuestionarios.pregunta (enunciado, imagen, nivel_dificultad, retroalimentacion, tipo_pregunta_numero)
-VALUES ('Pregunta 2 de pruebas', null, 1, null, 3);
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('1', 'Cada casa comienza con un muro. Construye la primera pared de la casa colocando tablones de madera sobre los bloques marrones', 'https://media.discordapp.net/attachments/620371963570814996/1030647067296677918/Pregunta_1_enunciadp.png', '1', '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('1', 'https://cdn.discordapp.com/attachments/620371963570814996/1030652154404409385/Respuesta_1_incorrecta.png', FALSE, NULL, '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('2', 'https://cdn.discordapp.com/attachments/620371963570814996/1030652153854959687/Opcion_4.png', FALSE, NULL, '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('3', 'https://cdn.discordapp.com/attachments/620371963570814996/1030652153494245477/Opcion_3.png', FALSE, NULL, '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('4', 'https://cdn.discordapp.com/attachments/620371963570814996/1030643635429048382/Opcion_2.png', TRUE, NULL, '1');
 
-#Opciones de respuesta
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, true, 'Opcion 1 pregunta 1', 1);
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('2', 'Es bueno planificar. Planta cultivos a ambos lados del agua para no pasar hambre después.', 'https://drive.google.com/uc?id=1hD_hkjVsXliSpWxC3vq4KVl-6Ek15mDK', '1', '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('5', 'https://drive.google.com/uc?id=1Cz0cFTpPjswg2Yqau9Vgqnyhhv55OBWa', FALSE, NULL, '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('6', 'https://drive.google.com/uc?id=1DuHtkrveYQ0yukzE_8kY8kwcxPfgz2gu', TRUE, NULL, '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('7', 'https://drive.google.com/uc?id=1i-aTGZoTvdPcyuma_foNTc-sYhYgtL-4', FALSE, NULL, '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('8', 'https://drive.google.com/uc?id=1ckK7lexgrGMN5LbauUNeFEE9gHAIkV24', FALSE, NULL, '2');
 
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, false, 'Opcion 2 pregunta 1', 1);
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('3', '¿Qué figura se forma con el siguiente desarrollo plano?', 'https://drive.google.com/uc?id=1VQ3N1EGZ7qDMVdfsp74XmNxuNUswrbG3', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('9', 'https://drive.google.com/uc?id=18ohPHGulcPCTCh9vn8UlOlRIG9LGmbhi', TRUE, NULL, '3');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('10', 'https://drive.google.com/uc?id=198-YocVgZWktEu2eCsacgCdpbelrIM4-', FALSE, NULL, '3');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('11', 'https://drive.google.com/uc?id=1xgF6Fl4GrbTA9vPnWgLltkE-ecN5Pi_C', FALSE, NULL, '3');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('12', 'https://drive.google.com/uc?id=1cGUAG3HMHcVnM7Z4kBy8aC3QOQo1JOyr', FALSE, NULL, '3');
 
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, false, 'Opcion 3 pregunta 1', 1);
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('4', 'Elige la opción del número que corresponde al recuadro de la siguiente', 'https://drive.google.com/uc?id=1JGNZ0GFtxtzALQbhAQl6xC012dVJMYGQ', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('13', NULL, FALSE, '0', '4');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('14', NULL, TRUE, '9', '4');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('15', NULL, FALSE, '6', '4');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('16', NULL, FALSE, '1', '4');
 
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, false, 'Opcion 4 pregunta 1', 1);
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('5', 'DIDIIDID es a 49499494 como DIIDIIDD es a: ', 'https://drive.google.com/uc?id=1JGNZ0GFtxtzALQbhAQl6xC012dVJMYGQ/', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('17', NULL, FALSE, '94494499', '5');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('18', NULL, TRUE, '49949944', '5');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('19', NULL, FALSE, '49499494', '5');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('20', NULL, FALSE, '94944949', '5');
 
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, true, 'Opcion 1 pregunta 2', 2);
-
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, false, 'Opcion 2 pregunta 2', 2);
-
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, false, 'Opcion 3 pregunta 2', 2);
-
-INSERT INTO cuestionarios.opcion (imagen, is_correcta, texto, pregunta_id)
-VALUES (null, false, 'Opcion 4 pregunta 2', 2);
-
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('6', 'Plato es a cereales como sobre es a: ', 'https://drive.google.com/uc?id=1JGNZ0GFtxtzALQbhAQl6xC012dVJMYGQ/', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('21', NULL, FALSE, 'Cartero', '6');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('22', NULL, FALSE, 'Sello', '6');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('23', NULL, TRUE, 'Carta', '6');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('24', NULL, FALSE, 'Buzón', '6');
 INSERT INTO cuestionarios.test (id, adaptacion, puntaje, tiempo, usuario_documento)
 VALUES (1, 2, 10, null, null);
+
 
