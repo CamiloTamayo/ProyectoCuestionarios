@@ -6,4 +6,6 @@ public interface UsuarioService {
     void guardarUsuario(Usuario usuario);
 
     void borrarUsuario(Usuario usuario);
+
+    Usuario obtenerUsuarioNombre(String nombre);
 }

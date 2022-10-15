@@ -16,8 +16,8 @@ public class TestServiceImpl implements TestService, Serializable {
 
     @Override
     @Transactional(readOnly = false)
-    public void guardarTest(Test test) {
-        testRepo.save(test);
+    public Test guardarTest(Test test) {
+        return testRepo.save(test);
     }
 
     @Override

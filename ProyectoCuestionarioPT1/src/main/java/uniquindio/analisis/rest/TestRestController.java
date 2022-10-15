@@ -6,7 +6,9 @@ import uniquindio.analisis.dto.ResultadoDTO;
 import uniquindio.analisis.model.Opcion;
 import uniquindio.analisis.model.Respuesta;
 import uniquindio.analisis.model.Test;
+import uniquindio.analisis.model.Usuario;
 import uniquindio.analisis.services.TestService;
+import uniquindio.analisis.services.UsuarioService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +22,15 @@ public class TestRestController {
     @Autowired
     public TestService testService;
 
+    @Autowired
+    public UsuarioService usuarioService;
+
     @GetMapping("/test/{usuarioNombre}")
     public Integer devolverIdTest(@PathVariable String usuarioNombre) {
-        return testService.obtenerTestUsuarioNombre(usuarioNombre);
+        Usuario usuario = usuarioService.obtenerUsuarioNombre(usuarioNombre);
+        Test test = new Test(usuario);
+        Test testGenerado = testService.guardarTest(test);
+        return testGenerado.getId();
     }
 
     @GetMapping("/test/resultados/{idTest}")

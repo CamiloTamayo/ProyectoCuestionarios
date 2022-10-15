@@ -26,4 +26,9 @@ public class UsuarioServiceImpl implements UsuarioService, Serializable {
         usuarioRepo.delete(usuario);
     }
 
+    @Override
+    public Usuario obtenerUsuarioNombre(String nombre) {
+        return usuarioRepo.findByNombre(nombre);
+    }
+
 }

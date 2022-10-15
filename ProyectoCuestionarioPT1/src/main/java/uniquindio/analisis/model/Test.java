@@ -30,4 +30,8 @@ public class Test {
     @ToString.Exclude
     @JsonIgnore
     private List<Respuesta> respuestas;
+
+    public Test(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }
