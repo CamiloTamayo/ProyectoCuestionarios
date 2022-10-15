@@ -14,9 +14,7 @@ public class TestRestController {
     public TestService testService;
 
     @GetMapping("/test/{usuarioNombre}")
-    public String devolverIdTest(@PathVariable String usuarioNombre) {
-        testService.obtenerTestUsuarioNombre(usuarioNombre);
-
-        return null;
+    public Integer devolverIdTest(@PathVariable String usuarioNombre) {
+        return testService.obtenerTestUsuarioNombre(usuarioNombre);
     }
 }
