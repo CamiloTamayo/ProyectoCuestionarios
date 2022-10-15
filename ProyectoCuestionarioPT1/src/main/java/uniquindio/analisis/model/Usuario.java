@@ -28,7 +28,9 @@ public class Usuario {
     @JsonIgnore
     private List<Test> tests;
 
-    public Usuario(String nombre) {
+    public Usuario(String nombre, TipoUsuario tipoUsuario) {
+
         this.nombre = nombre;
+        this.tipoUsuario = tipoUsuario;
     }
 }

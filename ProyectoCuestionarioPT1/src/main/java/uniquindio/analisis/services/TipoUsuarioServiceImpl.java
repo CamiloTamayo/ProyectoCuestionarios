@@ -26,4 +26,9 @@ public class TipoUsuarioServiceImpl implements TipoUsuarioService, Serializable 
         tipoUsuarioRepo.delete(tipoUsuario);
     }
 
+    @Override
+    public TipoUsuario obtenerTipoUsuario(Integer tipo) {
+        return tipoUsuarioRepo.findById(tipo).get();
+    }
+
 }
