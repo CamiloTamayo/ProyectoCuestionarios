@@ -25,7 +25,7 @@ public class TestRestController {
         return testService.obtenerTestUsuarioNombre(usuarioNombre);
     }
 
-    @GetMapping("/test/{idTest}")
+    @GetMapping("/test/resultados/{idTest}")
     public List<ResultadoDTO> devolverResultados(@PathVariable Integer idTest) {
 
         Test test = testService.obtenerTestId(idTest);
