@@ -1,0 +1,61 @@
+#tipo usuario
+INSERT INTO cuestionarios.tipo_usuario (nombre)
+VALUES ('Estudiante');
+
+INSERT INTO cuestionarios.tipo_usuario (nombre)
+VALUES ('Profesor');
+
+#Tipo pregunta
+INSERT INTO cuestionarios.tipo_pregunta (nombre)
+VALUES ('Secuencia logica');
+
+INSERT INTO cuestionarios.tipo_pregunta (nombre)
+VALUES ('Actividad de laberinto');
+
+INSERT INTO cuestionarios.tipo_pregunta (nombre)
+VALUES ('Actividad de cuestionario');
+
+#Preguntas
+
+
+
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('1', 'Cada casa comienza con un muro. Construye la primera pared de la casa colocando tablones de madera sobre los bloques marrones', 'https://media.discordapp.net/attachments/620371963570814996/1030647067296677918/Pregunta_1_enunciadp.png', '1', '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('1', 'https://cdn.discordapp.com/attachments/620371963570814996/1030652154404409385/Respuesta_1_incorrecta.png', FALSE, NULL, '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('2', 'https://cdn.discordapp.com/attachments/620371963570814996/1030652153854959687/Opcion_4.png', FALSE, NULL, '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('3', 'https://cdn.discordapp.com/attachments/620371963570814996/1030652153494245477/Opcion_3.png', FALSE, NULL, '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('4', 'https://cdn.discordapp.com/attachments/620371963570814996/1030643635429048382/Opcion_2.png', TRUE, NULL, '1');
+
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('2', 'Es bueno planificar. Planta cultivos a ambos lados del agua para no pasar hambre después.', 'https://cdn.discordapp.com/attachments/620371963570814996/1030698960597303356/Pregunta_2.png', '1', '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('5', 'https://cdn.discordapp.com/attachments/620371963570814996/1030698959523561472/Incorrecta_1.png', FALSE, NULL, '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('6', 'https://cdn.discordapp.com/attachments/620371963570814996/1030698959125086249/Correcta.png', TRUE, NULL, '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('7', 'https://cdn.discordapp.com/attachments/620371963570814996/1030698959901048913/Incorrecta_2.png', FALSE, NULL, '2');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('8', 'https://cdn.discordapp.com/attachments/620371963570814996/1030698960240771162/Incorrecta_3.png', FALSE, NULL, '2');
+
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('3', '¿Qué figura se forma con el siguiente desarrollo plano?', 'https://cdn.discordapp.com/attachments/620371963570814996/1030699522923438150/ImagenPregunta1.jpg', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('9', 'https://cdn.discordapp.com/attachments/620371963570814996/1030699523149922344/OpcionA_1.jpg', TRUE, NULL, '3');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('10', 'https://cdn.discordapp.com/attachments/620371963570814996/1030699523468689428/OpcionB_1.jpg', FALSE, NULL, '3');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('11', 'https://cdn.discordapp.com/attachments/620371963570814996/1030699523737133126/OpcionC_1.jpg', FALSE, NULL, '3');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('12', 'https://cdn.discordapp.com/attachments/620371963570814996/1030699524009754674/OpcionD_1.jpg', FALSE, NULL, '3');
+
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('4', 'Elige la opción del número que corresponde al recuadro de la siguiente', 'https://cdn.discordapp.com/attachments/620371963570814996/1030703736953245736/ImagenPregunta2.jpg', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('13', NULL, FALSE, '0', '4');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('14', NULL, TRUE, '9', '4');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('15', NULL, FALSE, '6', '4');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('16', NULL, FALSE, '1', '4');
+
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('5', 'DIDIIDID es a 49499494 como DIIDIIDD es a: ', 'https://cdn.discordapp.com/attachments/620371963570814996/1030721223912587284/ImagenCP1.jpg', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('17', NULL, FALSE, '94494499', '5');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('18', NULL, TRUE, '49949944', '5');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('19', NULL, FALSE, '49499494', '5');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('20', NULL, FALSE, '94944949', '5');
+
+INSERT INTO `cuestionarios`.`pregunta` (`id`, `enunciado`, `imagen`, `nivel_dificultad`, `tipo_pregunta_numero`) VALUES ('6', 'Plato es a cereales como sobre es a: ', 'https://cdn.discordapp.com/attachments/620371963570814996/1030723773919404122/ImagenCP2.jpg', '1', '1');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('21', NULL, FALSE, 'Cartero', '6');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('22', NULL, FALSE, 'Sello', '6');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('23', NULL, TRUE, 'Carta', '6');
+INSERT INTO `cuestionarios`.`opcion` (`id`, `imagen`, `is_correcta`, `texto`, `pregunta_id`) VALUES ('24', NULL, FALSE, 'Buzón', '6');
+
+INSERT INTO cuestionarios.test (id, adaptacion, puntaje, tiempo, usuario_documento)
+VALUES (1, 2, 10, null, null);
+
+
