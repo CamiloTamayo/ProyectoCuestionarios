@@ -16,6 +16,8 @@
 	<packaging>jar</packaging>
 	<properties>
 		<java.version>11</java.version>
+		<full-artifact-name>target/${project.artifactId}-${project.version}.jar</full-artifact-name>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -42,16 +44,58 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.heroku.sdk</groupId>
+			<artifactId>heroku-maven-plugin</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<version>2.7.5</version>
+		</dependency>
 
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.4</version>
+				<configuration>
+					<appName>backcuestionarios</appName>
+					<includeTarget>false</includeTarget>
+					<includes>
+						<include>${basedir}/${full-artifact-name}</include>
+					</includes>
+					<jdkVersion>11</jdkVersion>
+					<processTypes>
+						<web>java $JAVA_OPTS -jar ${full-artifact-name}</web>
+					</processTypes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.7.5</version>
+				<configuration>
+					<mainClass>uniquindio.analisis.Proyectocuestionariopt1Application</mainClass>
+				</configuration>
+
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
-
 	</build>
 </project>
