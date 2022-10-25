@@ -54,6 +54,7 @@ public class TestRestController {
                 }
             }
             resultadosEnvio.add(resultadoDTO);
+            resultadoDTO = new ResultadoDTO();
         }
 
         return resultadosEnvio;
