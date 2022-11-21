@@ -34,6 +34,12 @@ public class PreguntaServiceImpl implements PreguntaService, Serializable {
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public List<Pregunta> obtenerPreguntasDificultad(Integer dificultad) {
+        return preguntaRepo.obtenerPreguntasDificultad(dificultad);
+    }
+
+    @Override
     public Pregunta obtenerPreguntaId(Integer id) {
         return preguntaRepo.findById(id).get();
     }
