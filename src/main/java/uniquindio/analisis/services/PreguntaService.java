@@ -11,6 +11,8 @@ public interface PreguntaService {
     public void borrarPregunta(Pregunta pregunta);
 
     public List<Pregunta> listarPreguntas();
+    
+    public List<Pregunta> obtenerPreguntasDificultad(Integer dificultad);
 
     public Pregunta obtenerPreguntaId(Integer id);
 }

@@ -35,7 +35,6 @@ public class PreguntaRestController {
     public Pregunta preguntaDificultad(@PathVariable Integer puntuacion, @PathVariable Integer dificultad, @PathVariable String ids){
         Integer dificultadCalculada = 0;
         Pregunta preguntaSeleccionada;
-
         //Calcular dificultad dinamica
         //Si se encuentra en dificultad 1
         if(dificultad == 1){
@@ -60,7 +59,7 @@ public class PreguntaRestController {
         }
         //Si se encuentra en dificultad 3
         if (dificultad == 3){
-            if(puntuacion <= limiteDificilBajar){
+            if(puntuacion < limiteDificilBajar){
                 dificultadCalculada = 2;
             }else{
                 dificultadCalculada = 3;
